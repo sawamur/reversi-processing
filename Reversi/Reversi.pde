@@ -156,9 +156,9 @@ void gameOver() {
   textSize(20);
   fill(0);
   String message;
-  if( board.winner() == Cell.BLACK ){
+  if( board.winner() == myStone ){
     message = "YOU Win!";
-  } else if ( board.winner() == Cell.WHITE ){
+  } else if ( board.winner() == aiStone ){
     message = "YOU Lose!";
   } else {
     // 引き分けもありえる
