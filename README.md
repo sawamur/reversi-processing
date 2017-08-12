@@ -14,3 +14,16 @@ Processingによるオセロ(リバーシ)ゲーム
 ## 起動方法
 
 Processingをインストールしたのち `Reversi/Reversi.pde`をダブルクリックしてください
+
+
+## 基本的な考え方
+
+![Basic](basic_structure.png)
+
+画面の上の盤面(Boardクラスのオブジェクト)が載っていて、盤面がマス(Cellクラスのオブジェクト)を8x8の行列の形をもっています。
+
+![Cell](cell.png)
+
+それぞれのマスは３つの状態をもちます
+
+
