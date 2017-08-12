@@ -24,6 +24,21 @@ class Ui {
   }
   
   /**
+  * 「AIが考えてる」と表示する
+  */
+  void showThinking() {
+    textSize(20);
+    fill(0);
+    text("AI thinking..", 20 , 640 + 30);
+  }
+
+  void showWinnerMessage(String message) {
+    textSize(20);
+    fill(0);
+    text(message, 20 , 640 + 30);
+  }
+  
+  /**
   * その座標で押されたボタンがあればそのボタンの番号を返す
   */
   int hitAnyButton(int x, int y) {

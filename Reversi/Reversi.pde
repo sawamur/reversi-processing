@@ -45,7 +45,9 @@ void draw(){
     if( aiTurnStartTime == 0){
       aiTurnStartTime = millis(); 
     }
-    showThinking();
+    // 「考えている」と表示
+    ui.showThinking();
+    
     if(millis() - aiTurnStartTime > 2000){
       turnForAi();
       aiTurnStartTime = 0; // 考えるフリのためタイマーをリセット
@@ -139,22 +141,12 @@ void turnForAi() {
   turnEnd();
 }
 
-/**
-* 「AIが考えてる」と表示する
-*/
-void showThinking() {
-  textSize(20);
-  fill(0);
-  text("AI thinking..", 20 , 640 + 30);
-}
 
 /**
 * ゲームオーバー
 * どちらが勝ったか表示する
 */
-void gameOver() {
-  textSize(20);
-  fill(0);
+void gameOver() {    
   String message;
   if( board.winner() == myStone ){
     message = "YOU Win!";
@@ -164,6 +156,6 @@ void gameOver() {
     // 引き分けもありえる
     message = "Draw!";
   }
-  text(message, 20 , 640 + 30);
+  ui.showWinnerMessage(message);
   noLoop();  
 }
