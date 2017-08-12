@@ -1,4 +1,6 @@
-
+/**
+* マスのクラス
+*/
 class Cell {
   static final int SIZE = 80;
   static final int BLACK = 1;
@@ -30,12 +32,12 @@ class Cell {
     return this.stone; 
   }
 
-  void showGhost(int colorToShow) {
+  void showGhost(int stoneToShow) {
     if(this.hasStone()){
      return; 
     }
     noStroke();
-    if(colorToShow == BLACK){
+    if(stoneToShow == BLACK){
       fill(0, 255 * 0.3);  
     } else {
       fill(255, 255 * 0.3);
