@@ -19,7 +19,7 @@ Processingをインストールしたのち `Reversi/Reversi.pde`をダブルク
 
 ## 基本的な考え方
 
-`Reversi/Reversi.pde`がメインのロジックです
+[Reversi/Reversi.pde](Reversi/Reversi.pde)がメインのロジックです
 
 ![Basic](basic_structure.png)
 
@@ -37,11 +37,15 @@ Processingをインストールしたのち `Reversi/Reversi.pde`をダブルク
 
 ### ひっくり返すかどうか確認する
 
+[Reversi/Board.pde](Reversi/Board.pde)  `ArrayList<Cell> cellsToFlipWith(Cell cell, int stone)`
+
 1. 縦横斜めの８方向に並ぶマスをそれぞれ配列として取り出す
 1. それぞれの配列のマスを一個一個確認し、自分と違う色がならんでいて、その先に自分と同じ色があるかを確認する
 1. 上のパターンに当てはまる場合は、その途中の石をひっくりかえせるマスとして配列まとめて返す
 
 ### 敵AIのロジック
+
+[Reversi/Ai.pde](Reversi/Ai.pde) `Cell think()`
 
 もっとも愚直なロジックなのでちょう弱い
 
@@ -49,6 +53,8 @@ Processingをインストールしたのち `Reversi/Reversi.pde`をダブルク
 2. 一番ひっくりかえせる石が多いマスに置く
 
 #### 改良案
+
+以下のように改良すれば強くなる
 
 1. オセロの形勢の評価は単に自分のコマがどれだけ多いかであるからして、盤面のスコアを計算できるようにする
 1. 自分の手の後に相手の動きを計算し、相手が最高の打ち手をすると仮定して、次に石を置いたときにもっともスコアが高くなるマスをピックアップする
