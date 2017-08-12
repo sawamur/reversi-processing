@@ -59,7 +59,7 @@ void draw(){
 void showGhost() {
   Cell cell = board.getCellAtGeometry(mouseX, mouseY);
   if(cell != null){
-    cell.showGhost(turn);    
+    cell.showGhost(myStone);    
   }
 }
 
@@ -74,7 +74,7 @@ boolean isMyTurn() {
 * ターンエンド
 */
 void turnEnd() {
-  turn = turn * -1;
+  turn = (myStone == turn) ? aiStone : myStone;
 }
 
 /**
