@@ -16,6 +16,11 @@ Processingによるオセロ(リバーシ)ゲーム
 
 Processingをインストールしたのち `Reversi/Reversi.pde`をダブルクリックしてください
 
+## 詳しい解説記事
+
+詳しい解説記事は以下にあります
+
+http://qiita.com/sawamur@github/items/7cd17a68d7db8a4a4ca0
 
 ## 基本的な考え方
 
