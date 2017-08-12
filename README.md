@@ -21,15 +21,19 @@ Processingをインストールしたのち `Reversi/Reversi.pde`をダブルク
 
 [Reversi/Reversi.pde](Reversi/Reversi.pde)がメインのロジックです
 
+画面の上の盤面(Boardクラスのオブジェクト)が載っていて、盤面がマス(Cellクラスのオブジェクト)を8x8の行列の形をもっています。
+
 ![Basic](basic_structure.png)
 
-画面の上の盤面(Boardクラスのオブジェクト)が載っていて、盤面がマス(Cellクラスのオブジェクト)を8x8の行列の形をもっています。
+それぞれのマスは３つの状態（石なし、黒い石あり、白い石あり）をもちます
 
 ![Cell](cell.png)
 
-それぞれのマスは３つの状態をもちます
+
 
 ### 石を置くとき
+
+[Reversi/Reversi.pde](Reversi/Reversi.pde) `void mouseClicked()`
 
 1. クリックした位置にあるマスを盤面から取り出す
 2. そこに石を置いたらひっくりかえすマスがあるかどうか確認
